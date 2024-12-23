@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  describeimage:
+    image: intelligentcontentacademy/describeimage:1.0
+    ports:
+      - "8501:8501"  # Host:Container port mapping
+    env_file:
+      - .env         # Load environment variables from .env file
+    environment:
+      - ANTHROPIC_API_KEY=YOUR API KEY HERE

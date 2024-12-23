@@ -1,0 +1,5 @@
+anthropic
+Requests
+streamlit
+openai
+python-dotenv
