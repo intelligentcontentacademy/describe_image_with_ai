@@ -193,14 +193,15 @@ def ai_prompt():
     return prompt
 
 def get_api_keys():
-    if not os.path.exists('.anthropic_key'):
-        with open('.anthropic_key', 'w') as f:
-            if os.environ.get('ANTHROPIC_API_KEY'):
-                f.write(os.environ.get('ANTHROPIC_API_KEY'))
-            else:
-                f.write('Enter API Key')
-    with open('.anthropic_key', 'r') as f:
-        st.session_state.anthropic_api_key=f.read().strip()
+    if os.getenv('STREAMLIT_CLOUD') == 'false':
+        if not os.path.exists('.anthropic_key'):
+            with open('.anthropic_key', 'w') as f:
+                if os.environ.get('ANTHROPIC_API_KEY'):
+                    f.write(os.environ.get('ANTHROPIC_API_KEY'))
+                else:
+                    f.write('Enter API Key')
+        with open('.anthropic_key', 'r') as f:
+            st.session_state.anthropic_api_key = f.read().strip()
 
 
 # Get environment variables.
@@ -313,8 +314,9 @@ with col2:
         
         with colum3:
             def write_anthropic_api_key():
-                with open('.anthropic_key', 'w') as f:
-                    f.write(f'{st.session_state.anthropic_api_key}\n')
+                if os.getenv('STREAMLIT_CLOUD') == 'false':
+                    with open('.anthropic_key', 'w') as f:
+                        f.write(f'{st.session_state.anthropic_api_key}\n')
 
             if anthropic_model:
                 with st.popover("API Key", use_container_width=True):
