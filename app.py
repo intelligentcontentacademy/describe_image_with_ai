@@ -212,7 +212,7 @@ setup_session_variables()
 get_api_keys()
 
 st.title(env_vars["app_name"])
-st.subheader(env_vars["app_description"])
+st.write(env_vars["app_description"])
 st.caption(f"Version: {env_vars['app_version']} | {env_vars['app_author']}")
 
 spacing(2)
