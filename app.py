@@ -260,7 +260,11 @@ with col1:
             # Set the upload directory
             upload_dir = "uploads/"
             
-            # Save the uploaded file temporarily
+            # Check if the upload directory exists, if not, create it
+            if not os.path.exists(upload_dir):
+                os.makedirs(upload_dir)
+            
+            # Save the uploaded file temporarily                
             temp_image_path = os.path.join(upload_dir, uploaded_file.name)
             with open(temp_image_path, "wb") as f:
                 f.write(uploaded_file.getbuffer())
