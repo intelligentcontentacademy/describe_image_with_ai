@@ -193,8 +193,7 @@ def ai_prompt():
     return prompt
 
 def get_api_keys():
-    st.write(os.getenv('STREAMLIT_CLOUD'))
-    if os.getenv('STREAMLIT_CLOUD') == False:
+    if os.getenv('STREAMLIT_CLOUD') == "False":
         if not os.path.exists('.anthropic_key'):
             with open('.anthropic_key', 'w') as f:
                 if os.environ.get('ANTHROPIC_API_KEY'):
@@ -206,7 +205,6 @@ def get_api_keys():
     else:
         if os.path.exists('.anthropic_key'):
             os.remove('.anthropic_key')
-
 
 # Get environment variables.
 env_vars = get_environment_attributes()
@@ -318,7 +316,7 @@ with col2:
         
         with colum3:
             def write_anthropic_api_key():
-                if os.getenv('STREAMLIT_CLOUD') == False:
+                if os.getenv('STREAMLIT_CLOUD') == "False":
                     with open('.anthropic_key', 'w') as f:
                         f.write(f'{st.session_state.anthropic_api_key}\n')
 
