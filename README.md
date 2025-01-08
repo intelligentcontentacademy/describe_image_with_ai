@@ -1,4 +1,6 @@
 # Describe Image with AI
+### Intelligent Content Academy [>>](https://www.intelligentcontentacademy.com)
+
 ![01](https://static.wixstatic.com/media/9cda2b_b961cadae986429eb50e7d2aab42bbfe~mv2.png)
 ---
 ![02](https://static.wixstatic.com/media/9cda2b_42ddc64d17a84e6f8b73066c73e1cee9~mv2.png)
