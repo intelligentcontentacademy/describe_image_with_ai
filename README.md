@@ -1,5 +1,4 @@
 # Describe Image with AI
-### Intelligent Content Academy [>>](https://www.intelligentcontentacademy.com)
 
 ![01](https://static.wixstatic.com/media/9cda2b_b961cadae986429eb50e7d2aab42bbfe~mv2.png)
 ---
@@ -64,3 +63,6 @@ docker-compose up -d
 
 ## Running the App
 Once the container is running, just open up a browser and go to localhost:8501 (or whatever port you ended up using).
+
+# Learn More
+[Visit](https://www.intelligentcontentacademy.com) Intelligent Content Academy.
