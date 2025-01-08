@@ -55,10 +55,10 @@ Make sure you save the file as "docker-compose.yml".  Add your API key to Anthro
 You can then execute that file using the following commands:
 ```
 # Run it attached 
-docker-compose up 
+docker compose up 
 
 # Run it detached (But you won't see the python packages being installed)
-docker-compose up -d
+docker compose up -d
 ```
 
 ## Running the App
